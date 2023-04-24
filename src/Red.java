@@ -23,6 +23,9 @@ public class Red extends JFrame{
     private JButton restaurarTodosButton;
     private JButton mostrarColaDePrioridadButton;
     private JTextArea areaPrioridad;
+    private JButton buscarButton;
+    private JTextArea areaBuscar;
+    private JTextField textField1;
     Queue<Persona> espera = new LinkedList<>();
     Queue<Persona> prioridad = new PriorityQueue<>();
     Stack<Persona> pila = new Stack<>();
@@ -112,6 +115,12 @@ public class Red extends JFrame{
                 for (Persona imprimir:prioridad){
                     areaPrioridad.append(imprimir.toString());
                 }
+            }
+        });
+        buscarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         });
     }
